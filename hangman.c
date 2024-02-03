@@ -99,6 +99,7 @@ int	main(int ac, char **av)
 	p.word = av[3];
 	p.hidenword = ft_strdup(p.word);
 	ft_memset(p.hidenword, '_', ft_strlen(p.hidenword));
+	system("clear");
 	game(p);
 	return (1);
 }
