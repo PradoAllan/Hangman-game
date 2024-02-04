@@ -61,22 +61,25 @@ void	game(struct player p)
 		p.tried[i] = p.guess;
 		if (is_correct(p))
 		{
-			system("clear");
+			ft_putchar_fd('\n', 1);
 			ft_putendl_fd("Nice one! You got the right guess.", 1);
 			show_lifes(p);
 			status(p);
+			sleep(5);
+			system("clear");
+
 		}
 		else
 		{
-			system("clear");
+			ft_putchar_fd('\n', 1);
 			ft_putendl_fd("Wrong guess... Try again!", 1);
 			p.lifes--;
 			show_lifes(p);
 			status(p);
+			sleep(5);
+			system("clear");
 		}
 		i++;
-		ft_putendl_fd("============================================================", 1);
-		ft_putendl_fd("Press enter to continue...", 1);
 		getchar();
 		system("clear");
 	}
