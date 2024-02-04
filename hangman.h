@@ -12,7 +12,7 @@ struct player
 	char guess;
 	char *word;
 	char *hidenword;
-	char *tried;
+	char tried[26];
 };
 
 #endif
